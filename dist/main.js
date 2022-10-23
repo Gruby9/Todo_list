@@ -1,0 +1,1 @@
+(()=>{"use strict";let e=[];const o=class{constructor(e,o){this.name=e,this.todosList=o}addProject(){e.push(this)}removeProject(){for(let o=0;o<e.length;o++)e[o].name===this.name&&e.splice(o,1)}},s=new o("szkola",[]),t=new o("gimnazjum",["uczyc sie"]);console.log(s),console.log(t),s.addProject(),t.addProject(),s.removeProject(),console.log(e)})();
