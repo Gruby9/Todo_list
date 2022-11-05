@@ -1,0 +1,13 @@
+body {
+    background-color: dimgray;
+}
+
+.content {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+    .project {
+        border: 3px solid black;
+    }
+}

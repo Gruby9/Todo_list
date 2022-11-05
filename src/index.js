@@ -1,5 +1,8 @@
 import { Projects } from "./projects"
 import { listOfProjects } from "./projects"
+import "./style.scss";
+
+displayProjects();
 
 function addingProjects() {
     const addProjectButton = document.querySelector('.addProject')
@@ -70,7 +73,7 @@ function displayProjects() {
             removeTodoButton.innerHTML = "Remove todo"
 
             removeTodoButton.addEventListener('click', function() {
-                return listOfProjects[n].removeTodo(), displayProjects()
+                return listOfProjects[i].removeTodo(n), displayProjects()
             })
 
             todos.appendChild(title)   
@@ -83,21 +86,3 @@ function displayProjects() {
     
 
 }
-
-
-
-// function adddingDOM() {
-//     const project = document.querySelectorAll('.project')
-//     for (let i = 0; i < project.length; i++) {
-//         const button = project[i].querySelector('.addTodoButton')
-//         button.addEventListener('click', listOfProjects[i].addTodo())
-//     }
-// }
-// const test = document.querySelector('.test')
-// test.addEventListener('click', function() {
-//     return adddingDOM()
-// })
-
-
-console.log(listOfProjects)
-

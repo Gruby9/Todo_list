@@ -30,19 +30,14 @@ const Projects = class Projects {
         const newTodo = new Todo(
             prompt('What is the title of the new Todo'),
             prompt('What is the description of new Todo?'),
-            prompt('What is deadline of the new Todo?'),
+            new Date(prompt('What is deadline of the new Todo?')),
             prompt('What is priority of the new Todo?')
             )
 
         this.todosList.push(newTodo)
     }
-    removeTodo() {
-        for (let i = 0; i < this.todosList.length; i++) {
-            if (this.todosList[i].title === this.title) {
-                this.todosList.splice(i, 1)
-            }
-            else {}
-        }
+    removeTodo(n) {
+        this.todosList.splice(n, 1)
     }
 }
 
